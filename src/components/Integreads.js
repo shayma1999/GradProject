@@ -9,7 +9,7 @@ export default class Tabkhat extends Component{
       }
     
       fetchData= async()=>{
-        const response = await fetch("http://192.168.0.103:3000/taabkh");
+        const response = await fetch("http://192.168.0.102:3000/taabkh");
         const customers = await response.json();
         this.setState({data: customers});
     
@@ -37,29 +37,8 @@ export default class Tabkhat extends Component{
               <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_countA}</Text>
               <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_amount}</Text>
               <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_name}</Text>
-              <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_l1}</Text>
-              <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_l11}</Text>
-              <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_l3}</Text>
-              <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_l4}</Text>
-              <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_l5}</Text>
-              <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_l6}</Text>
-              <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_l7}</Text>
-              <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_l8}</Text>
-              <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_l9}</Text>
-              <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_l10}</Text>
-              <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_l111}</Text>
-              <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_l13}</Text>
-              <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_l15}</Text>
-              <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_l16}</Text>
-              <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_l17}</Text>
-              <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_l18}</Text>
-              <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_l19}</Text>
-              <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_way}</Text>
-              <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_l1w}</Text>
-
-              
-              
-
+              <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_Idiv}</Text>
+            
 
              </View>
             
