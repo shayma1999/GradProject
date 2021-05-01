@@ -12,7 +12,7 @@ import {TextInput,Card,Title} from 'react-native-paper'
 import { LinearGradient } from 'expo-linear-gradient';
 import { MaterialIcons,Entypo} from '@expo/vector-icons'
 import Logo from './components/Logo';
-import Tabkhat from './components/tabkhat';
+import Searchroom from './components/Searchroom';
 import Integreads from './components/Integreads';
 import Swiper from 'react-native-swiper'
 import SectionedMultiSelect from 'react-native-sectioned-multi-select';
@@ -823,17 +823,18 @@ ic:{
         )}
         tabBarTextStyle={styles.tabBarTextStyle}
         tabBarInactiveTextColor={'black'}
-        tabBarActiveTextColor={'red'}
+        tabBarActiveTextColor={'blue'}
         tabBarUnderlineStyle={styles.underlineStyle}
         initialPage={2}
         // containerWidth={200}
       >
 
-        <View key={'1'} tabLabel={'firt tab '}>
-        <Tabkhat/>
+        <View key={'1'} tabLabel={' البحث'}>
+          <Searchroom/>
+        <Integreads/>
         </View>
        
-        <View key={'2'} tabLabel={'second tab'}>
+        <View key={'2'} tabLabel={'البحث حسب المكونات'}>
         <View>
           <SectionedMultiSelect
             items={items}
@@ -847,7 +848,7 @@ ic:{
             selectedItems={this.state.selectedItems}
           />
         </View>
-        <Integreads/>
+        
         </View>
       </ScrollableTabView>
    
