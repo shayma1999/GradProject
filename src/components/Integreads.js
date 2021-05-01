@@ -9,7 +9,7 @@ export default class Tabkhat extends Component{
       }
     
       fetchData= async()=>{
-        const response = await fetch("http://192.168.0.102:3000/taabkh");
+        const response = await fetch("http://192.168.0.115:3000/finalfinal");
         const customers = await response.json();
         this.setState({data: customers});
     
@@ -28,6 +28,8 @@ export default class Tabkhat extends Component{
            
     
            <View style={{backgroundColor:'#fffafa',padding:10,margin:10}}>
+             <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_title}</Text>
+              <Image source={{uri:item.list_img}} style = {{height: 200, resizeMode : 'stretch', margin: 5 }} />
               <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_p}</Text>
               <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_time}</Text>
               <Text style={{color:'#000000', fontWeight:'bold'}}>{item.list_timeA}</Text>
