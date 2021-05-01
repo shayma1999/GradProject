@@ -2,8 +2,18 @@ module.exports = app => {
     const names = require("../controller/names.controller.js");
     const customers = require("../controller/customer.controller.js");
     const imgtitle = require("../controller/imgtitle.controller.js");
-    const taabkh = require("../controller/taabkh.controller.js");
+    const taabkh = require("../controller/finalfinal.controller.js");
   
+    
+    app.get(/search\/(?:([^\/]+?))\/?$/i, function (req, res) {
+      var search = req.params[0]
+      var sql = "SELECT * from college_of_engh1 WHERE HNumber LIKE '%"+search+"%'"
+      conn.query(sql, function (err, result) {
+        if (err) res.send(err)
+        res.send(result)
+      })
+    })
+
     
   
     // Retrieve all Customers
@@ -16,7 +26,7 @@ module.exports = app => {
   app.get("/customers", customers.findAll);
 
   // Retrieve all recipes
-  app.get("/taabkh", taabkh.findAll);
+  app.get("/finalfinal", taabkh.findAll);
 
   // Retrieve all imgtitle
   app.get("/imgtitle", imgtitle.findAll);
